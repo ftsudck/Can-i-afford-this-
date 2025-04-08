@@ -1,0 +1,90 @@
+:root {
+    --light-bg: #ffffff;
+    --light-text: #333;
+    --light-card: #e8f5e9;
+  
+    --dark-bg: #0b0b0b;
+    --dark-text: #a5d6a7;
+    --dark-card: #1e1e1e;
+  
+    --green: #4CAF50;
+    --red: #f44336;
+    --blue: #2196F3;
+    --yellow: #FFC107;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--light-text);
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: var(--light-card);
+    border-radius: 10px;
+    margin-top: 40px;
+    transition: background-color 0.5s;
+  }
+  
+  body.dark-mode .container {
+    background: var(--dark-card);
+  }
+  
+  input[type="number"],
+  select,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: var(--green);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #388e3c;
+  }
+  
+  h1,
+  h2 {
+    text-align: center;
+  }
+  
+  #emiDetails {
+    background-color: #f1f8e9;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  body.dark-mode #emiDetails {
+    background-color: #2a2a2a;
+  }
+  
+  .chart-container {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.8s ease, max-height 0.8s ease;
+  }
+  
+  .chart-container.visible {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 20px;
+  }
+  
